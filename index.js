@@ -5,21 +5,44 @@
 
 'use strict';
 
-var Imagemin = require('imagemin');
+var isJpg = require('is-jpg');
+var jpegtran = require('jpegtran-bin').path;
+var spawn = require('child_process').spawn;
 
 module.exports = function(content, file, conf) {
-    var imagemin = new Imagemin()
-    .src(content)
-    .use(Imagemin.jpegtran({ progressive: true }));
+    if (!isJpg(content)) {
+        return;
+    }
 
-    return imagemin.run(function (err, files) {
-        if (err) {
-            throw err;
-        }
+    var args = ['-copy', 'none', '-optimize'];
+    var ret = [];
+    var len = 0;
 
-        return files[0];
-        // => { contents: <Buffer 89 50 4e ...> }
+    if (opts.progressive) {
+        args.push('-progressive');
+    }
+
+    var cp = spawn(jpegtran, args);
+
+    cp.on('error', function (err) {
+        return;
     });
+
+    cp.stderr.setEncoding('utf8');
+    // cp.stderr.on('data', function (data) {
+    //     return;
+    // });
+
+    cp.stdout.on('data', function (data) {
+        ret.push(data);
+        len += data.length;
+    });
+
+    cp.on('close', function () {
+        // cb(null, file);
+    });
+
+    cp.stdin.end(content);
 };
 
 // console.log(Imagemin.jpegtran({ progressive: true })());

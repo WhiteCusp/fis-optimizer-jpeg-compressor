@@ -1,6 +1,6 @@
 {
   "name": "fis-optimizer-jpeg-compressor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "fis .jpeg file compressor plugin",
   "main": "index.js",
   "scripts": {
@@ -15,16 +15,38 @@
     "fis",
     "compressor"
   ],
-  "author": "baiya",
+  "author": {
+    "name": "baiya"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor/issues"
   },
   "homepage": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor",
   "dependencies": {
-    "imagemin": "^3.1.0"
+    "is-jpg": "^1.0.0",
+    "jpegtran-bin": "^2.0.0"
   },
-  "devDependencies": {
-    "imagemin": "^3.1.0"
-  }
+  "gitHead": "608b31ed7f3c8a8edce0a800edf93f8f49c43b7f",
+  "_id": "fis-optimizer-jpeg-compressor@0.0.1",
+  "_shasum": "1173c2b35602556579b5cf4c1fc0403b495bf63d",
+  "_from": "fis-optimizer-jpeg-compressor@",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "baiya",
+    "email": "bigpet1991@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "baiya",
+      "email": "bigpet1991@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "1173c2b35602556579b5cf4c1fc0403b495bf63d",
+    "tarball": "http://registry.npmjs.org/fis-optimizer-jpeg-compressor/-/fis-optimizer-jpeg-compressor-0.0.1.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/fis-optimizer-jpeg-compressor/-/fis-optimizer-jpeg-compressor-0.0.1.tgz",
+  "readme": "ERROR: No README data found!"
 }
