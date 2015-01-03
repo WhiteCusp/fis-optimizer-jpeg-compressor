@@ -21,6 +21,9 @@
     "url": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor/issues"
   },
   "homepage": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor",
+  "dependencies": {
+    "imagemin": "^3.1.0"
+  },
   "devDependencies": {
     "imagemin": "^3.1.0"
   }
