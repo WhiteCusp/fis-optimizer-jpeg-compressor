@@ -1,0 +1,27 @@
+{
+  "name": "fis-optimizer-jpeg-compressor",
+  "version": "0.0.1",
+  "description": "fis .jpeg file compressor plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor.git"
+  },
+  "keywords": [
+    "jpeg",
+    "fis",
+    "compressor"
+  ],
+  "author": "baiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor/issues"
+  },
+  "homepage": "https://github.com/WhiteCusp/fis-optimizer-jpeg-compressor",
+  "devDependencies": {
+    "imagemin": "^3.1.0"
+  }
+}
